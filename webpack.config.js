@@ -21,6 +21,7 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, './dist'), //输出文件路径
     publicPath: '/dist/', //文件资源路径
+    // publicPath: '/cardTemplates/t3/', //文件资源路径
     filename: '[name].js?v=[hash]',
     chunkFilename: '[id]-chunk.js?v=[hash]'
   },
@@ -32,7 +33,7 @@ module.exports = {
           loaders: {
 
             less: ExtractTextPlugin.extract({
-              use: ['css-loader?minimize', 'postcss-loader'
+              use: ['css-loader?minimize', 'postcss-loader','less-loader'
               // {
               //   loader: 'less-loader',
               //   options: {

@@ -15,4 +15,7 @@
 
 <style lang="scss">
   @import url('./assets/css/reset.css');
+  body{
+    margin: 2em 0 3.5em 0;
+  }
 </style>

@@ -4,24 +4,24 @@ const container = resolve => {
   require.ensure(['../views/container/container.vue'], () => {
     resolve(require('../views/container/container.vue'));
   });
-}
+};
 const home = resolve => {
   require.ensure(['../views/home/home.vue'], () => {
     resolve(require('../views/home/home.vue'));
   });
-}
+};
 const series = resolve => {
   require.ensure(['../views/series/series.vue'], () => {
     resolve(require('../views/series/series.vue'));
   });
-}
+};
 
-const routers = [{
+ const routers = [{
   path: '/',
   name: 'index',
-  component:container,
+  component: container,
   redirect: {
-    name: 'welcome'
+    name: 'home'
   },
   children: [{
     path: '/home',
@@ -55,9 +55,9 @@ const config = {
   base: '/cardTemplates/t3/',
   routes: routers
 }
-const route = new VueRouter(config);
-route.beforeEach((to, from, next) => {
+const router = new VueRouter(config);
+router.beforeEach((to, from, next) => {
   window.scrollTo(0, 0);
   next();
 });
-export default route;
+export default router;

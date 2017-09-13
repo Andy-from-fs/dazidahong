@@ -1,13 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <title>dahongdazi</title>
-    <link rel="stylesheet" href="/dist/main.css">
-  </head>
-  <body>
-    <div id="app"></div>
-    <script src="/dist/vendors.js"></script>
-    <script src="/dist/main.js"></script>
-  </body>
+
+<head>
+  <meta charset="utf-8">
+  <title>dahongdazi</title>
+  <meta name="viewport" content="width=device-width,
+    initial-scale=1,
+    maximum-scale=1,
+    minimum-scale=1,
+    user-scalable=no">
+  <script>
+    ! function(n, e) {
+      var t = n.documentElement,
+        i = "orientationchange" in window ?
+        "orientationchange" : "resize",
+        d = function() {
+          var n = t.clientWidth;
+          n > 640 && (n = 640), n && (t.style.fontSize = 20 * (n / 320) + "px")
+        };
+      n.addEventListener && (e.addEventListener(i, d, !1), n.addEventListener("DOMContentLoaded", d, !1))
+    }(document, window);
+  </script>
+  <link rel="stylesheet" href="/dist/main.css">
+</head>
+
+<body>
+  <div id="app"></div>
+  <script src="/dist/vendors.js"></script>
+  <script src="/dist/main.js"></script>
+</body>
+
 </html>
