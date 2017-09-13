@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,
+        initial-scale=1,
+        maximum-scale=1,
+        minimum-scale=1,
+        user-scalable=no">
+  <script>
+    ! function(n, e) {
+      var t = n.documentElement,
+        i = "orientationchange" in window ?
+        "orientationchange" : "resize",
+        d = function() {
+          var n = t.clientWidth;
+          n > 640 && (n = 640), n && (t.style.fontSize = 20 * (n / 320) + "px")
+        };
+      n.addEventListener && (e.addEventListener(i, d, !1), n.addEventListener("DOMContentLoaded", d, !1))
+    }(document, window);
+  </script>
+  <title>衍荣家具</title>
+  <!-- <link rel="stylesheet" type="text/css" href="http://120.26.36.152/web_common/img/test/reset.css"> -->
+  <!-- <link href="https://sj-public.b0.upaiyun.com/js/swiper/swiper.min.css" rel="stylesheet"> -->
+
+  <!-- <link rel="stylesheet" type="text/css" href="/src/assets/icomoon/style.css"> -->
+</head>
+
+<body>
+  <!--[if lt IE 9]>
+    <div style="padding:16px 5px;">您正在使用 <strong>过时的</strong> 浏览器. 是时候 <a href="http://browsehappy.com/">更换一个更好的浏览器</a> 来提升用户体验.</div>
+  <![endif]-->
+  <div id="app"></div>
+  <script>
+    // window.PUBLICPATH = 'TPL';    
+    window.onerror = function(errorMessage) {
+      if (errorMessage.indexOf('缺少标识符') >= 0)
+        browserSupport();
+      console.log('errorMessage：', errorMessage)
+    }
+
+    function browserSupport() {
+      console.log(navigator)
+      var userAgent = window.navigator.userAgent.toLowerCase();
+      var index = userAgent.indexOf("msie");
+      if (index >= 0) {
+        //只有IE 10 及以下才有MSIE标识
+        var str = userAgent.substr(index + 5, 4).split(".");
+        console.log(index, str)
+        if (Number(str[0]) < 9) {
+          //IE < 9 不支持
+          alert("你的IE浏览器版本太低，请升级浏览器至IE9.0或以上版本进行浏览")
+        }
+      };
+    }
+  </script>
+  <!-- <script type="text/javascript" src="https://sj-public.b0.upaiyun.com/js/swiper/swiper-3.4.2.min.js"></script> -->
+  <script src='http://api.map.baidu.com/api?v=2.0&ak=84aee2174f9263066fe25467226cbf2a	'></script>
+
+</body>
+
+</html>
