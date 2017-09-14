@@ -16,7 +16,7 @@ const series = resolve => {
   });
 };
 
- const routers = [{
+const routers = [{
   path: '/',
   name: 'index',
   component: container,
@@ -31,12 +31,28 @@ const series = resolve => {
       title: '奇新实木家具'
     }
   }, {
+    path: '/series-yuanmuyuan',
+    name: 'series-yuanmuyuan',
+    component: series,
+    meta: {
+      title: '原木缘系列',
+      kind: 3,
+    }
+  }, {
     path: '/series-Europe',
     name: 'series-Europe',
     component: series,
     meta: {
       title: '欧风系列',
       kind: 2,
+    }
+  }, {
+    path: '/series-huayun',
+    name: 'series-huayun',
+    component: series,
+    meta: {
+      title: '华韵系列',
+      kind: 1
     }
   }, {
     path: '/series-huaxia',

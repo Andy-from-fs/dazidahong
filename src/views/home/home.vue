@@ -13,10 +13,10 @@ Description
       <nav>展会形象</nav>
     </div>
     <div class="series-group">
-      <nav class="_left" ref="huaxin"><img src="../../assets/pics/huaxia.png"></nav>
-      <nav class="_right" ref="huayun"><img src="../../assets/pics/huayun.png"></nav>
-      <nav class="_left" ref="oufeng"><img src="../../assets/pics/oufeng.png"></nav>
-      <nav class="_right" ref="yuanmu"><img src="../../assets/pics/yuanmu.png"></nav>
+      <nav class="_left" ref="huaxin" @click="goRoute('series-huaxia')"><img src="../../assets/pics/huaxia.png"></nav>
+      <nav class="_right" ref="huayun" @click="goRoute('series-huayun')"><img src="../../assets/pics/huayun.png"></nav>
+      <nav class="_left" ref="oufeng" @click="goRoute('series-Europe')"><img src="../../assets/pics/oufeng.png"></nav>
+      <nav class="_right" ref="yuanmu" @click="goRoute('series-yuanmuyuan')"><img src="../../assets/pics/yuanmu.png"></nav>
       <div class="clear"></div>
     </div>
   </div>

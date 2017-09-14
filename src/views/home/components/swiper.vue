@@ -111,7 +111,7 @@
 
   .swiper-slide {
     width: 100%;
-    height: 10em;
+    height: 13em;
     overflow: hidden;
     img {
       width: 100%;

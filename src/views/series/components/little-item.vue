@@ -18,14 +18,14 @@
 <script>
   export default {
     name: 'little-item',
-    props: ['name', 'imgSrc', 'likeNum', 'index'],
+    props: ['name', 'imgSrc', 'likeNum', 'index', 'float'],
     methods: {
       computeFloat(index) {
         let direction;
         console.log(this.$refs.container);
-        if (parseInt(index) % 3 === 1) {
+        if (this.$props.float === 'left') {
           direction = "left";
-        } else if (parseInt(index) % 3 === 2) {
+        } else if (this.$props.float === 'right') {
           direction = "right";
         }
         this.$refs.container.style.cssFloat = direction;
@@ -61,6 +61,8 @@
       text-overflow: ellipsis;
       white-space: nowrap;
       float: left;
+      height: 1.3em;
+      line-height: 1.5em;
     }
     .like {
       text-align: right;
